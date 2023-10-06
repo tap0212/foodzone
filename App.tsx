@@ -13,6 +13,7 @@ import StackNavigator from './src/navigator';
 import { Provider } from 'react-redux';
 import { persistor, store } from './src/store';
 import { PersistGate } from 'redux-persist/integration/react';
+import Toast from 'react-native-toast-message';
 
 function App(): JSX.Element {
   return (
@@ -23,6 +24,7 @@ function App(): JSX.Element {
         <Provider store={store}>
           <PersistGate loading={null} persistor={persistor}>
             <StackNavigator />
+            <Toast />
           </PersistGate>
         </Provider>
         <SafeAreaView style={styles.safeArea} />
