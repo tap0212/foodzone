@@ -31,7 +31,7 @@ const Input = ({
           autoCapitalize={type === 'email-address' ? 'none' : undefined}
           onChangeText={onChange}
           placeholder={placeholderText}
-          placeholderTextColor={colors.secondary.silver}
+          placeholderTextColor={colors.background.primary}
           style={[styles.input, inputStyle]}
           keyboardType={type}
           secureTextEntry={secureTextEntry}
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    color: colors.white.DEFAULT,
+    color: '#000',
     fontSize: 16,
     paddingTop: 0,
     paddingBottom: 0,
@@ -75,11 +75,11 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   filled: {
-    borderColor: colors.black[70],
-    backgroundColor: colors.black[80],
+    borderColor: '#fff',
+    backgroundColor: '#fff',
   },
   outlines: {
-    borderColor: colors.black[30],
+    borderColor: '#fff',
   },
 });
 

@@ -16,22 +16,18 @@ export const BasicButton = ({
   };
 
   return (
-    <LinearGradient
-      colors={[colors.white.DEFAULT, '#F9F1E7']}
-      style={styles.button}>
-      <TouchableOpacity
-        style={[
-          styles.button,
-          disabled ? styles.buttonBlack : styles.primaryButton,
-        ]}
-        onPress={onPresshandler}>
-        {typeof text === 'string' ? (
-          <Text style={styles.btnText}>{text}</Text>
-        ) : (
-          <>{text}</>
-        )}
-      </TouchableOpacity>
-    </LinearGradient>
+    <TouchableOpacity
+      style={[
+        styles.button,
+        disabled ? styles.buttonBlack : styles.primaryButton,
+      ]}
+      onPress={onPresshandler}>
+      {typeof text === 'string' ? (
+        <Text style={styles.btnText}>{text}</Text>
+      ) : (
+        <>{text}</>
+      )}
+    </TouchableOpacity>
   );
 };
 
@@ -43,21 +39,24 @@ const styles = StyleSheet.create({
     height: 56,
     alignItems: 'center',
     justifyContent: 'center',
-    color: colors.black[60],
+    color: "#000",
   },
   buttonBlack: {
-    backgroundColor: colors.black[40],
+    backgroundColor: '#fff',
+    opacity: 0.4,
   },
-  primaryButton: {},
+  primaryButton: {
+    backgroundColor: colors.background.primary
+  },
   btnText: {
     fontSize: 18,
     fontWeight: '600',
-    color: colors.black[80],
+    color: '#000',
   },
   textWhite: {
-    color: colors.white.DEFAULT,
+    color: '#fff',
   },
   textBlack: {
-    color: colors.black[80],
+    color: '#000',
   },
 });

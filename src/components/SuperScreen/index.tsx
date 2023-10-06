@@ -55,11 +55,11 @@ const styles = StyleSheet.create({
   mainContainer: {
     height: '100%',
     width: '100%',
-    backgroundColor: colors.black.DEFAULT,
+    backgroundColor: colors.background.primary,
     padding: 16,
   },
   subContainer: {
-    backgroundColor: colors.black.DEFAULT,
+    backgroundColor: colors.background.primary,
   },
   buttonContainer: {
     height: 48,

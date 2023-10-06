@@ -35,7 +35,7 @@ const IconButton = ({
         iconPlacement === 'right' ? null : styles.reverseIcon,
         containerStyle,
       ]}
-      colors={[colors.white.DEFAULT, '#F9F1E7']}>
+      colors={['#fff', '#F9F1E7']}>
       {renderBtn()}
     </LinearGradient>
   ) : (
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     padding: 16,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: colors.black[30],
+    borderColor: '#000',
   },
   btn: {
     display: 'flex',
@@ -74,10 +74,10 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 16,
-    color: colors.white.DEFAULT,
+    color: '#fff'
   },
   blackText: {
-    color: colors.black[60],
+    color: '#000',
   },
 });
 

@@ -30,16 +30,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   buttonBlack: {
-    backgroundColor: colors.black[40],
+    backgroundColor: '#000',
   },
   secondaryButton: {
-    color: colors.white.DEFAULT,
-    borderColor: colors.white.DEFAULT,
+    color: '#fff',
+    borderColor: '#fff',
     borderWidth: 2,
   },
   btnText: {
     fontSize: 18,
     fontWeight: '600',
-    color: colors.white.DEFAULT,
+    color: '#000'
   },
 });

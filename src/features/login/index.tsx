@@ -140,13 +140,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   mainText: {
-    color: colors.white.DEFAULT,
+    color: colors.text,
     fontSize: 36,
     lineHeight: 40,
     fontWeight: '600',
   },
   welcomeText: {
-    color: colors.black[10],
+    color: colors.text,
     fontSize: 14,
     textTransform: 'uppercase',
     lineHeight: 40,
@@ -163,12 +163,12 @@ const styles = StyleSheet.create({
     right: 94,
   },
   bottomContainer: {
-    backgroundColor: colors.black[70],
+    backgroundColor: colors.background.secondary,
     paddingHorizontal: 24,
     paddingVertical: 16,
   },
   setupText: {
-    color: colors.white.DEFAULT,
+    color: colors.text,
     fontSize: 22,
     fontWeight: '600',
     lineHeight: 28,
@@ -176,7 +176,7 @@ const styles = StyleSheet.create({
   setupSubtileText: {
     marginTop: 8,
     fontSize: 16,
-    color: colors.black[20],
+    color: colors.text,
   },
   footer: {
     marginHorizontal: 24,

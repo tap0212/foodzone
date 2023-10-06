@@ -22,14 +22,14 @@ const CustomBackground: React.FC<BottomSheetBackgroundProps> = ({
     backgroundColor: interpolateColor(
       animatedIndex.value,
       [0, 1],
-      [colors.black[70], colors.black[70]],
+      [colors.background.secondary, colors.background.secondary],
     ),
     borderTopLeftRadius: interpolate(animatedIndex.value, [0, 1], [16, 16]),
     borderTopRightRadius: interpolate(animatedIndex.value, [0, 1], [16, 16]),
     borderColor: interpolateColor(
       animatedIndex.value,
       [0, 1],
-      [colors.black[50], colors.black[50]],
+      [colors.background.secondary, colors.background.secondary],
     ),
     borderTopWidth: interpolate(animatedIndex.value, [0, 1], [1, 1]),
   }));
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     opacity: 0.8,
   },
   footer: {
-    backgroundColor: colors.black[70],
+    backgroundColor: colors.background.secondary,
     padding: 24,
     alignItems: 'center',
     justifyContent: 'center',

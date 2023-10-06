@@ -14,6 +14,7 @@ import { Provider } from 'react-redux';
 import { persistor, store } from './src/store';
 import { PersistGate } from 'redux-persist/integration/react';
 import Toast from 'react-native-toast-message';
+import { colors } from './src/theme/colors';
 
 function App(): JSX.Element {
   return (
@@ -34,7 +35,7 @@ function App(): JSX.Element {
 }
 const styles = StyleSheet.create({
   flex1: {flex: 1},
-  main: {flex: Platform.OS === 'android' ? 0.03 : 0, backgroundColor: '#000'},
+  main: {flex: Platform.OS === 'android' ? 0.03 : 0, backgroundColor: colors.background.primary},
   safeArea: {
     flex: Platform.OS === 'android' ? 0.03 : 0,
     backgroundColor: '#1a1a1a',
