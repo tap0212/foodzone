@@ -9,3 +9,7 @@ export type User = {
     email: string;
     token: string
 }
+
+export enum LEVELS {
+    LOGIN_COMPLETE = 'LOGIN_COMPLETE',
+}

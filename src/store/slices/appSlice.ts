@@ -1,6 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {RootState} from '..';
-import { ReduxApiStatus, User } from '../../types';
+import { LEVELS, ReduxApiStatus, User } from '../../types';
 
 export interface App {
   user: User;
@@ -9,6 +9,7 @@ export interface App {
     passwordError: string;
   };
   reduxState: ReduxApiStatus;
+  levels: LEVELS[];
 }
 const initialState: App = {
   user: {
@@ -19,8 +20,8 @@ const initialState: App = {
     emailError: '',
     passwordError: '',
   },
-  reduxState: ReduxApiStatus.IDEL
-
+  reduxState: ReduxApiStatus.IDEL,
+  levels: []
 };
 export const appSlice = createSlice({
   name: 'app',
@@ -40,12 +41,16 @@ export const appSlice = createSlice({
     updateReduxState: (state, action: PayloadAction<ReduxApiStatus>) => {
       state.reduxState = action.payload;
     },
+    updateLevels: (state, action: PayloadAction<LEVELS>) => {
+      state.levels.push(action.payload);
+    },
   },
 });
 
-export const {updateUser, updateValidations, updateReduxState} = appSlice.actions;
+export const {updateUser, updateValidations, updateReduxState, updateLevels} = appSlice.actions;
 export const userSelector = (state: RootState) => state.app.user;
 export const tokenSelector = (state: RootState) => state.app.user.token;
 export const validationsSelector = (state: RootState) => state.app.validations;
 export const reduxStateSelector = (state: RootState) => state.app.reduxState;
+export const levelsSelector = (state: RootState) => state.app.levels;
 export default appSlice.reducer;

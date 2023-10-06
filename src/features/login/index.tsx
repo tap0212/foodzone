@@ -9,8 +9,8 @@ import {BasicButton} from '../../components/Buttons/Basic';
 import { useNavigation } from '@react-navigation/native';
 import { useAppDispatch } from '../../hooks/resux';
 import { useSelector } from 'react-redux';
-import { ReduxApiStatus, User } from '../../types';
-import { reduxStateSelector, updateUser, updateValidations, userSelector, validationsSelector } from '../../store/slices/appSlice';
+import { LEVELS, ReduxApiStatus, User } from '../../types';
+import { reduxStateSelector, updateLevels, updateUser, updateValidations, userSelector, validationsSelector } from '../../store/slices/appSlice';
 import useSignup from '../../hooks/useSignup';
 import { routeMap } from '../../navigator/navigatorData';
 
@@ -33,6 +33,7 @@ const Login = () => {
       });
     }
     if(reduxState === ReduxApiStatus.SUCCESS){
+      dispatch(updateLevels(LEVELS.LOGIN_COMPLETE))
       navigation.navigate(routeMap.onboarding.landing)
     }
   }, [reduxState, message])
