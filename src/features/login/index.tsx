@@ -5,24 +5,50 @@ import SuperScreen from '../../components/SuperScreen';
 import {BottomSlate} from '../../components/BottomSlate';
 import Input from '../../components/InputField';
 import {BasicButton} from '../../components/Buttons/Basic';
+import { useNavigation } from '@react-navigation/native';
+import { useAppDispatch } from '../../hooks/resux';
+import { useSelector } from 'react-redux';
+import { ReduxApiStatus, User } from '../../types';
+import { reduxStateSelector, updateUser, updateValidations, userSelector, validationsSelector } from '../../store/slices/appSlice';
 
 const Login = () => {
+  const navigation = useNavigation();
+  const dispatch = useAppDispatch();
+  const user: User = useSelector(userSelector);
+  const validations: { emailError: string; passwordError: string } =
+    useSelector(validationsSelector);
+  const reduxState: ReduxApiStatus = useSelector(reduxStateSelector);
   const [password, setPassword] = useState<string>('');
+
   const handleNextPress = () => {
     //
   };
   const getIsNextDisabled = () => {
+    if (
+      !user.email ||
+      !password ||
+      validations.emailError ||
+      validations.passwordError ||
+      reduxState === ReduxApiStatus.PENDING
+    ) {
+      return true;
+    }
     return false;
   };
   const onChangeEmail = (text: string) => {
     const reg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w\w+)+$/;
     if (reg.test(text) === false) {
+      dispatch(updateUser({ ...user, email: text }));
+      dispatch(updateValidations({ ...validations, emailError: 'Invalid email!' }));
       return false;
     } else {
+      dispatch(updateUser({ ...user, email: text, }));
+      dispatch(updateValidations({ ...validations, emailError: '' }));
     }
   };
-  const onChangePassword = () => {
-    //
+
+  const onChangePassword = (text: string) => {
+    setPassword(text);
   };
   return (
     <SuperScreen
@@ -53,10 +79,10 @@ const Login = () => {
             <Text style={styles.setupSubtileText}>Get started</Text>
             <View style={styles.inputContainer}>
               <Input
-                error={''}
+                error={validations.emailError}
                 onChange={onChangeEmail}
-                value={''}
-                placeholderText={''}
+                value={user.email as string}
+                placeholderText={'Enter email'}
                 type="email-address"
                 design="filled"
               />
