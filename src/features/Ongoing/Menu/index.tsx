@@ -21,8 +21,12 @@ import {
 } from '../../../store/slices/appSlice';
 import { calculateTotalPrice, findItemById } from '../../../utils';
 import { Restaurant } from '../../../assets/Data/type';
+import { routeMap } from '../../../navigator/navigatorData';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Restaurants() {
+  const navigator = useNavigation();
+
   const selectedRestaurant = useSelector(currentRestaurantSelector);
   const dispatch = useDispatch();
   const cart = useSelector(cartSelector);
@@ -104,7 +108,9 @@ export default function Restaurants() {
     const quantity = cart.quantityMap[itemId] || 0;
     return quantity;
   };
-
+  const onPressGoToCart = () => {
+    navigator.navigate(routeMap.checkout.cart);
+  };
   return (
     <KeyboardAvoidingView
       style={styles.mainContainer}
@@ -148,11 +154,7 @@ export default function Restaurants() {
               Total: $ {calculateTotalPrice(cart, selectedRestaurant as Restaurant)}
             </Text>
           </View>
-          <TouchableOpacity
-            style={styles.goToCartButton}
-            onPress={() => {
-              //
-            }}>
+          <TouchableOpacity style={styles.goToCartButton} onPress={onPressGoToCart}>
             <Text style={styles.btnText}>Go to cart</Text>
           </TouchableOpacity>
         </View>

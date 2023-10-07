@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {routeMap, routeXScreenMap} from './navigatorData';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { routeMap, routeXScreenMap } from './navigatorData';
 import { levelsSelector } from '../store/slices/appSlice';
 import { useSelector } from 'react-redux';
 import { LEVELS } from '../types';
@@ -19,7 +19,7 @@ const StackNavigator = () => {
     switch (latestLevel) {
       case LEVELS.LOGIN_COMPLETE:
         return routeMap.onboarding.landing;
-      
+
       default:
         return routeMap.onboarding.login;
     }
