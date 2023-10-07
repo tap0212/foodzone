@@ -9,4 +9,5 @@ export interface SuperScreenProps {
   contentContainerStyleProp?: ViewStyle;
   mainContainerStyle?: ViewStyle;
   scrollEnabled?: boolean;
+  shouldShowHeader?: boolean;
 }

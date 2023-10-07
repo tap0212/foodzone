@@ -1,44 +1,54 @@
-import React, {useEffect, useState} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import Toast from 'react-native-toast-message';
-import {colors} from '../../theme/colors';
+import { colors } from '../../theme/colors';
 import SuperScreen from '../../components/SuperScreen';
-import {BottomSlate} from '../../components/BottomSlate';
+import { BottomSlate } from '../../components/BottomSlate';
 import Input from '../../components/InputField';
-import {BasicButton} from '../../components/Buttons/Basic';
+import { BasicButton } from '../../components/Buttons/Basic';
 import { useNavigation } from '@react-navigation/native';
 import { useAppDispatch } from '../../hooks/resux';
 import { useSelector } from 'react-redux';
 import { LEVELS, ReduxApiStatus, User } from '../../types';
-import { reduxStateSelector, updateLevels, updateUser, updateValidations, userSelector, validationsSelector } from '../../store/slices/appSlice';
+import {
+  reduxStateSelector,
+  updateLevels,
+  updateUser,
+  updateValidations,
+  userSelector,
+  validationsSelector,
+} from '../../store/slices/appSlice';
 import useSignup from '../../hooks/useSignup';
 import { routeMap } from '../../navigator/navigatorData';
 
 const Login = () => {
   const navigation = useNavigation();
-  const reduxState: ReduxApiStatus = useSelector(reduxStateSelector)
+  const reduxState: ReduxApiStatus = useSelector(reduxStateSelector);
   const dispatch = useAppDispatch();
   const user: User = useSelector(userSelector);
   const validations: { emailError: string; passwordError: string } =
     useSelector(validationsSelector);
   const [password, setPassword] = useState<string>('');
-  const {message, callSignup} = useSignup({email: user.email, password})
+  const { message, callSignup } = useSignup({ email: user.email, password });
   useEffect(() => {
-    if(message && (reduxState === ReduxApiStatus.SUCCESS || reduxState === ReduxApiStatus.FAILED)){
+    if (
+      message &&
+      (reduxState === ReduxApiStatus.SUCCESS || reduxState === ReduxApiStatus.FAILED)
+    ) {
       Toast.show({
         type: reduxState === ReduxApiStatus.SUCCESS ? 'success' : 'error',
         text1: message,
         position: 'top',
-        topOffset: 80
+        topOffset: 80,
       });
     }
-    if(reduxState === ReduxApiStatus.SUCCESS){
-      dispatch(updateLevels(LEVELS.LOGIN_COMPLETE))
-      navigation.navigate(routeMap.onboarding.landing)
+    if (reduxState === ReduxApiStatus.SUCCESS) {
+      dispatch(updateLevels(LEVELS.LOGIN_COMPLETE));
+      navigation.navigate(routeMap.onboarding.landing);
     }
-  }, [reduxState, message])
+  }, [reduxState, message]);
   const handleNextPress = () => {
-    callSignup()
+    callSignup();
   };
   const getIsNextDisabled = () => {
     if (
@@ -59,7 +69,7 @@ const Login = () => {
       dispatch(updateValidations({ ...validations, emailError: 'Invalid email!' }));
       return false;
     } else {
-      dispatch(updateUser({ ...user, email: text, }));
+      dispatch(updateUser({ ...user, email: text }));
       dispatch(updateValidations({ ...validations, emailError: '' }));
     }
   };
@@ -68,9 +78,7 @@ const Login = () => {
     setPassword(text);
   };
   return (
-    <SuperScreen
-      noBottomButton={true}
-      mainContainerStyle={styles.mainContainerStyle}>
+    <SuperScreen noBottomButton={true} mainContainerStyle={styles.mainContainerStyle}>
       <View style={styles.containerStyle}>
         <View style={styles.topContainer}>
           <View style={styles.container}>
@@ -98,7 +106,7 @@ const Login = () => {
               <Input
                 error={validations.emailError}
                 onChange={onChangeEmail}
-                value={user.email as string}
+                value={user.email}
                 placeholderText={'Enter email'}
                 type="email-address"
                 design="filled"

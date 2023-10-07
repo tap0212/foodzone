@@ -1,0 +1,1357 @@
+{
+  "restaurants": {
+    "quick_bites": [
+      { "header": "Your quick bites" },
+      {
+        "id": 1,
+        "name": "Burger Haven",
+        "rating": 4.3,
+        "distance_km": 1.5,
+        "cuisines": [
+          {
+            "id": 101,
+            "name": "Burgers",
+            "items": [
+              {
+                "id": 1001,
+                "name": "Classic Cheeseburger",
+                "price": 8.99
+              },
+              {
+                "id": 1002,
+                "name": "Double Bacon Burger",
+                "price": 9.99
+              },
+              {
+                "id": 1003,
+                "name": "Veggie Burger",
+                "price": 7.99
+              }
+            ]
+          },
+          {
+            "id": 102,
+            "name": "Fries",
+            "items": [
+              {
+                "id": 1004,
+                "name": "Regular Fries",
+                "price": 3.99
+              },
+              {
+                "id": 1005,
+                "name": "Cheese Fries",
+                "price": 4.99
+              },
+              {
+                "id": 1006,
+                "name": "Sweet Potato Fries",
+                "price": 4.99
+              }
+            ]
+          },
+          {
+            "id": 103,
+            "name": "Sides",
+            "items": [
+              {
+                "id": 1007,
+                "name": "Onion Rings",
+                "price": 4.49
+              },
+              {
+                "id": 1008,
+                "name": "Chicken Nuggets",
+                "price": 5.99
+              },
+              {
+                "id": 1009,
+                "name": "Mozzarella Sticks",
+                "price": 6.49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Street Tacos Express",
+        "rating": 4.2,
+        "distance_km": 2.0,
+        "cuisines": [
+          {
+            "id": 104,
+            "name": "Tacos",
+            "items": [
+              {
+                "id": 1010,
+                "name": "Carne Asada Taco",
+                "price": 2.99
+              },
+              {
+                "id": 1011,
+                "name": "Al Pastor Taco",
+                "price": 2.49
+              },
+              {
+                "id": 1012,
+                "name": "Vegetarian Taco",
+                "price": 2.99
+              }
+            ]
+          },
+          {
+            "id": 105,
+            "name": "Quesadillas",
+            "items": [
+              {
+                "id": 1013,
+                "name": "Cheese Quesadilla",
+                "price": 4.99
+              },
+              {
+                "id": 1014,
+                "name": "Chicken Quesadilla",
+                "price": 5.99
+              },
+              {
+                "id": 1015,
+                "name": "Veggie Quesadilla",
+                "price": 4.99
+              }
+            ]
+          },
+          {
+            "id": 106,
+            "name": "Burritos",
+            "items": [
+              {
+                "id": 1016,
+                "name": "Beef Burrito",
+                "price": 6.99
+              },
+              {
+                "id": 1017,
+                "name": "Chicken Burrito",
+                "price": 6.99
+              },
+              {
+                "id": 1018,
+                "name": "Bean and Cheese Burrito",
+                "price": 5.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Pizza Palace",
+        "rating": 4.5,
+        "distance_km": 2.2,
+        "cuisines": [
+          {
+            "id": 107,
+            "name": "Pizza",
+            "items": [
+              {
+                "id": 1019,
+                "name": "Pepperoni Pizza",
+                "price": 11.99
+              },
+              {
+                "id": 1020,
+                "name": "Hawaiian Pizza",
+                "price": 12.99
+              },
+              {
+                "id": 1021,
+                "name": "Veggie Pizza",
+                "price": 10.99
+              }
+            ]
+          },
+          {
+            "id": 108,
+            "name": "Pasta",
+            "items": [
+              {
+                "id": 1022,
+                "name": "Spaghetti Carbonara",
+                "price": 10.99
+              },
+              {
+                "id": 1023,
+                "name": "Penne Alfredo",
+                "price": 9.99
+              },
+              {
+                "id": 1024,
+                "name": "Lasagna",
+                "price": 12.99
+              }
+            ]
+          },
+          {
+            "id": 109,
+            "name": "Salads",
+            "items": [
+              {
+                "id": 1025,
+                "name": "Caesar Salad",
+                "price": 5.99
+              },
+              {
+                "id": 1026,
+                "name": "Greek Salad",
+                "price": 6.99
+              },
+              {
+                "id": 1027,
+                "name": "Caprese Salad",
+                "price": 7.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "Sushi Express",
+        "rating": 4.2,
+        "distance_km": 3.5,
+        "cuisines": [
+          {
+            "id": 110,
+            "name": "Sushi Rolls",
+            "items": [
+              {
+                "id": 1028,
+                "name": "California Roll",
+                "price": 8.99
+              },
+              {
+                "id": 1029,
+                "name": "Spicy Tuna Roll",
+                "price": 9.99
+              },
+              {
+                "id": 1030,
+                "name": "Rainbow Roll",
+                "price": 11.99
+              }
+            ]
+          },
+          {
+            "id": 111,
+            "name": "Nigiri Sushi",
+            "items": [
+              {
+                "id": 1031,
+                "name": "Salmon Nigiri",
+                "price": 4.99
+              },
+              {
+                "id": 1032,
+                "name": "Tuna Nigiri",
+                "price": 5.99
+              },
+              {
+                "id": 1033,
+                "name": "Shrimp Nigiri",
+                "price": 4.99
+              }
+            ]
+          },
+          {
+            "id": 112,
+            "name": "Appetizers",
+            "items": [
+              {
+                "id": 1034,
+                "name": "Edamame",
+                "price": 3.99
+              },
+              {
+                "id": 1035,
+                "name": "Miso Soup",
+                "price": 2.99
+              },
+              {
+                "id": 1036,
+                "name": "Gyoza",
+                "price": 5.49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "Mediterranean Grill",
+        "rating": 4.4,
+        "distance_km": 3.8,
+        "cuisines": [
+          {
+            "id": 113,
+            "name": "Mediterranean",
+            "items": [
+              {
+                "id": 1037,
+                "name": "Hummus Platter",
+                "price": 7.99
+              },
+              {
+                "id": 1038,
+                "name": "Shawarma Wrap",
+                "price": 9.99
+              },
+              {
+                "id": 1039,
+                "name": "Falafel Platter",
+                "price": 8.99
+              }
+            ]
+          },
+          {
+            "id": 114,
+            "name": "Salads",
+            "items": [
+              {
+                "id": 1040,
+                "name": "Greek Salad",
+                "price": 6.99
+              },
+              {
+                "id": 1041,
+                "name": "Tabbouleh Salad",
+                "price": 5.99
+              },
+              {
+                "id": 1042,
+                "name": "Fattoush Salad",
+                "price": 6.49
+              }
+            ]
+          },
+          {
+            "id": 115,
+            "name": "Platters",
+            "items": [
+              {
+                "id": 1043,
+                "name": "Mixed Grill Platter",
+                "price": 14.99
+              },
+              {
+                "id": 1044,
+                "name": "Vegetarian Platter",
+                "price": 11.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "name": "Thai Spice House",
+        "rating": 4.6,
+        "distance_km": 3.7,
+        "cuisines": [
+          {
+            "id": 116,
+            "name": "Thai",
+            "items": [
+              {
+                "id": 1045,
+                "name": "Pad Thai Noodles",
+                "price": 10.99
+              },
+              {
+                "id": 1046,
+                "name": "Green Curry",
+                "price": 12.99
+              },
+              {
+                "id": 1047,
+                "name": "Tom Yum Soup",
+                "price": 5.99
+              }
+            ]
+          },
+          {
+            "id": 117,
+            "name": "Noodles",
+            "items": [
+              {
+                "id": 1048,
+                "name": "Drunk Noodles",
+                "price": 11.99
+              },
+              {
+                "id": 1049,
+                "name": "Pad See Ew",
+                "price": 10.99
+              },
+              {
+                "id": 1050,
+                "name": "Panang Curry Noodles",
+                "price": 12.49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "name": "Cafe La Parisienne",
+        "rating": 4.7,
+        "distance_km": 2.9,
+        "cuisines": [
+          {
+            "id": 118,
+            "name": "French",
+            "items": [
+              {
+                "id": 1051,
+                "name": "Croissant",
+                "price": 3.99
+              },
+              {
+                "id": 1052,
+                "name": "Quiche Lorraine",
+                "price": 5.99
+              },
+              {
+                "id": 1053,
+                "name": "Croque Monsieur",
+                "price": 6.99
+              }
+            ]
+          },
+          {
+            "id": 119,
+            "name": "Sandwiches",
+            "items": [
+              {
+                "id": 1054,
+                "name": "Ham and Cheese Baguette",
+                "price": 7.49
+              },
+              {
+                "id": 1055,
+                "name": "Turkey Club Sandwich",
+                "price": 8.49
+              },
+              {
+                "id": 1056,
+                "name": "Caprese Panini",
+                "price": 6.99
+              }
+            ]
+          },
+          {
+            "id": 120,
+            "name": "Desserts",
+            "items": [
+              {
+                "id": 1057,
+                "name": "Eclair",
+                "price": 4.49
+              },
+              {
+                "id": 1058,
+                "name": "Fruit Tart",
+                "price": 5.49
+              },
+              {
+                "id": 1059,
+                "name": "Opera Cake",
+                "price": 6.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "name": "Szechuan Palace",
+        "rating": 4.4,
+        "distance_km": 4.0,
+        "cuisines": [
+          {
+            "id": 121,
+            "name": "Chinese",
+            "items": [
+              {
+                "id": 1060,
+                "name": "Mapo Tofu",
+                "price": 9.99
+              },
+              {
+                "id": 1061,
+                "name": "Kung Pao Shrimp",
+                "price": 11.99
+              },
+              {
+                "id": 1062,
+                "name": "Beef with Broccoli",
+                "price": 10.99
+              }
+            ]
+          },
+          {
+            "id": 122,
+            "name": "Noodles",
+            "items": [
+              {
+                "id": 1063,
+                "name": "Chow Mein",
+                "price": 8.99
+              },
+              {
+                "id": 1064,
+                "name": "Lo Mein",
+                "price": 9.99
+              },
+              {
+                "id": 1065,
+                "name": "Dan Dan Noodles",
+                "price": 10.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "name": "Quick Wok",
+        "rating": 4.1,
+        "distance_km": 2.5,
+        "cuisines": [
+          {
+            "id": 123,
+            "name": "Asian",
+            "items": [
+              {
+                "id": 1066,
+                "name": "Orange Chicken",
+                "price": 8.99
+              },
+              {
+                "id": 1067,
+                "name": "Mongolian Beef",
+                "price": 9.99
+              },
+              {
+                "id": 1068,
+                "name": "Vegetable Fried Rice",
+                "price": 7.99
+              }
+            ]
+          },
+          {
+            "id": 124,
+            "name": "Sushi Rolls",
+            "items": [
+              {
+                "id": 1069,
+                "name": "Spicy Tuna Roll",
+                "price": 9.99
+              },
+              {
+                "id": 1070,
+                "name": "California Roll",
+                "price": 8.99
+              },
+              {
+                "id": 1071,
+                "name": "Eel Avocado Roll",
+                "price": 10.99
+              }
+            ]
+          },
+          {
+            "id": 125,
+            "name": "Appetizers",
+            "items": [
+              {
+                "id": 1072,
+                "name": "Spring Rolls",
+                "price": 4.99
+              },
+              {
+                "id": 1073,
+                "name": "Potstickers",
+                "price": 5.49
+              },
+              {
+                "id": 1074,
+                "name": "Edamame",
+                "price": 3.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "name": "Wrap It Up",
+        "rating": 4.0,
+        "distance_km": 3.0,
+        "cuisines": [
+          {
+            "id": 126,
+            "name": "Wraps",
+            "items": [
+              {
+                "id": 1075,
+                "name": "Chicken Caesar Wrap",
+                "price": 7.99
+              },
+              {
+                "id": 1076,
+                "name": "Mediterranean Veggie Wrap",
+                "price": 6.99
+              },
+              {
+                "id": 1077,
+                "name": "Buffalo Chicken Wrap",
+                "price": 8.49
+              }
+            ]
+          },
+          {
+            "id": 127,
+            "name": "Salads",
+            "items": [
+              {
+                "id": 1078,
+                "name": "Greek Salad",
+                "price": 6.99
+              },
+              {
+                "id": 1079,
+                "name": "Cobb Salad",
+                "price": 7.99
+              },
+              {
+                "id": 1080,
+                "name": "Caesar Salad",
+                "price": 5.99
+              }
+            ]
+          },
+          {
+            "id": 128,
+            "name": "Sides",
+            "items": [
+              {
+                "id": 1081,
+                "name": "French Fries",
+                "price": 3.99
+              },
+              {
+                "id": 1082,
+                "name": "Onion Rings",
+                "price": 4.49
+              },
+              {
+                "id": 1083,
+                "name": "Sweet Potato Fries",
+                "price": 4.99
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "trusted_restaurants": [
+      { "header": "Trusted restaurants" },
+      {
+        "id": 11,
+        "name": "Sabor Latino",
+        "rating": 4.4,
+        "distance_km": 3.5,
+        "cuisines": [
+          {
+            "id": 201,
+            "name": "Mexican",
+            "items": [
+              {
+                "id": 2001,
+                "name": "Enchiladas",
+                "price": 9.99
+              },
+              {
+                "id": 2002,
+                "name": "Chiles Rellenos",
+                "price": 10.99
+              },
+              {
+                "id": 2003,
+                "name": "Taco Salad",
+                "price": 8.99
+              }
+            ]
+          },
+          {
+            "id": 202,
+            "name": "Salvadoran",
+            "items": [
+              {
+                "id": 2004,
+                "name": "Pupusas",
+                "price": 7.99
+              },
+              {
+                "id": 2005,
+                "name": "Yuca Fries",
+                "price": 5.99
+              },
+              {
+                "id": 2006,
+                "name": "Tamales",
+                "price": 8.49
+              }
+            ]
+          },
+          {
+            "id": 203,
+            "name": "Guatemalan",
+            "items": [
+              {
+                "id": 2007,
+                "name": "Platanos Fritos",
+                "price": 5.99
+              },
+              {
+                "id": 2008,
+                "name": "Hilachas",
+                "price": 9.99
+              },
+              {
+                "id": 2009,
+                "name": "Rellenitos",
+                "price": 6.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "name": "Mama Mia Pizzeria",
+        "rating": 4.1,
+        "distance_km": 2.3,
+        "cuisines": [
+          {
+            "id": 204,
+            "name": "Italian",
+            "items": [
+              {
+                "id": 2010,
+                "name": "Pepperoni Pizza",
+                "price": 11.99
+              },
+              {
+                "id": 2011,
+                "name": "Lasagna",
+                "price": 13.99
+              },
+              {
+                "id": 2012,
+                "name": "Garlic Bread",
+                "price": 3.99
+              }
+            ]
+          },
+          {
+            "id": 205,
+            "name": "Salads",
+            "items": [
+              {
+                "id": 2013,
+                "name": "Caesar Salad",
+                "price": 5.99
+              },
+              {
+                "id": 2014,
+                "name": "Greek Salad",
+                "price": 6.99
+              },
+              {
+                "id": 2015,
+                "name": "Antipasto Salad",
+                "price": 7.99
+              }
+            ]
+          },
+          {
+            "id": 206,
+            "name": "Desserts",
+            "items": [
+              {
+                "id": 2016,
+                "name": "Tiramisu",
+                "price": 6.99
+              },
+              {
+                "id": 2017,
+                "name": "Chocolate Cake",
+                "price": 5.99
+              },
+              {
+                "id": 2018,
+                "name": "Cannoli",
+                "price": 4.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 13,
+        "name": "Noodle House",
+        "rating": 4.3,
+        "distance_km": 3.1,
+        "cuisines": [
+          {
+            "id": 207,
+            "name": "Ramen",
+            "items": [
+              {
+                "id": 2019,
+                "name": "Tonkotsu Ramen",
+                "price": 10.99
+              },
+              {
+                "id": 2020,
+                "name": "Miso Ramen",
+                "price": 9.99
+              },
+              {
+                "id": 2021,
+                "name": "Spicy Tan Tan Ramen",
+                "price": 11.99
+              }
+            ]
+          },
+          {
+            "id": 208,
+            "name": "Udon",
+            "items": [
+              {
+                "id": 2022,
+                "name": "Tempura Udon",
+                "price": 9.99
+              },
+              {
+                "id": 2023,
+                "name": "Nabeyaki Udon",
+                "price": 10.99
+              },
+              {
+                "id": 2024,
+                "name": "Kitsune Udon",
+                "price": 8.99
+              }
+            ]
+          },
+          {
+            "id": 209,
+            "name": "Appetizers",
+            "items": [
+              {
+                "id": 2025,
+                "name": "Gyoza",
+                "price": 5.49
+              },
+              {
+                "id": 2026,
+                "name": "Edamame",
+                "price": 3.99
+              },
+              {
+                "id": 2027,
+                "name": "Agedashi Tofu",
+                "price": 4.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "name": "Indian Spice House",
+        "rating": 4.5,
+        "distance_km": 4.5,
+        "cuisines": [
+          {
+            "id": 210,
+            "name": "Indian",
+            "items": [
+              {
+                "id": 2028,
+                "name": "Chicken Tikka Masala",
+                "price": 12.99
+              },
+              {
+                "id": 2029,
+                "name": "Vegetable Biryani",
+                "price": 11.99
+              },
+              {
+                "id": 2030,
+                "name": "Paneer Tikka",
+                "price": 10.99
+              }
+            ]
+          },
+          {
+            "id": 211,
+            "name": "Naan",
+            "items": [
+              {
+                "id": 2031,
+                "name": "Garlic Naan",
+                "price": 3.99
+              },
+              {
+                "id": 2032,
+                "name": "Butter Naan",
+                "price": 4.49
+              },
+              {
+                "id": 2033,
+                "name": "Plain Naan",
+                "price": 3.49
+              }
+            ]
+          },
+          {
+            "id": 212,
+            "name": "Curries",
+            "items": [
+              {
+                "id": 2034,
+                "name": "Lamb Curry",
+                "price": 13.99
+              },
+              {
+                "id": 2035,
+                "name": "Chana Masala",
+                "price": 9.99
+              },
+              {
+                "id": 2036,
+                "name": "Egg Curry",
+                "price": 11.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "name": "BBQ Pit",
+        "rating": 4.2,
+        "distance_km": 5.0,
+        "cuisines": [
+          {
+            "id": 213,
+            "name": "BBQ",
+            "items": [
+              {
+                "id": 2037,
+                "name": "Pulled Pork Sandwich",
+                "price": 9.99
+              },
+              {
+                "id": 2038,
+                "name": "Ribs Platter",
+                "price": 14.99
+              },
+              {
+                "id": 2039,
+                "name": "Brisket Plate",
+                "price": 12.99
+              }
+            ]
+          },
+          {
+            "id": 214,
+            "name": "Sides",
+            "items": [
+              {
+                "id": 2040,
+                "name": "Mac and Cheese",
+                "price": 4.99
+              },
+              {
+                "id": 2041,
+                "name": "Coleslaw",
+                "price": 3.99
+              },
+              {
+                "id": 2042,
+                "name": "Baked Beans",
+                "price": 3.99
+              }
+            ]
+          },
+          {
+            "id": 215,
+            "name": "Desserts",
+            "items": [
+              {
+                "id": 2043,
+                "name": "Pecan Pie",
+                "price": 5.49
+              },
+              {
+                "id": 2044,
+                "name": "Chocolate Brownie",
+                "price": 4.99
+              },
+              {
+                "id": 2045,
+                "name": "Banana Pudding",
+                "price": 4.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 16,
+        "name": "Cafe de Paris",
+        "rating": 4.7,
+        "distance_km": 2.7,
+        "cuisines": [
+          {
+            "id": 216,
+            "name": "French",
+            "items": [
+              {
+                "id": 2046,
+                "name": "Croissant",
+                "price": 3.99
+              },
+              {
+                "id": 2047,
+                "name": "Quiche Lorraine",
+                "price": 5.99
+              },
+              {
+                "id": 2048,
+                "name": "Croque Monsieur",
+                "price": 6.99
+              }
+            ]
+          },
+          {
+            "id": 217,
+            "name": "Sandwiches",
+            "items": [
+              {
+                "id": 2049,
+                "name": "Ham and Cheese Baguette",
+                "price": 7.49
+              },
+              {
+                "id": 2050,
+                "name": "Turkey Club Sandwich",
+                "price": 8.49
+              },
+              {
+                "id": 2051,
+                "name": "Caprese Panini",
+                "price": 6.99
+              }
+            ]
+          },
+          {
+            "id": 218,
+            "name": "Desserts",
+            "items": [
+              {
+                "id": 2052,
+                "name": "Eclair",
+                "price": 4.49
+              },
+              {
+                "id": 2053,
+                "name": "Fruit Tart",
+                "price": 5.49
+              },
+              {
+                "id": 2054,
+                "name": "Opera Cake",
+                "price": 6.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "name": "Thai Delight",
+        "rating": 4.6,
+        "distance_km": 3.4,
+        "cuisines": [
+          {
+            "id": 219,
+            "name": "Thai",
+            "items": [
+              {
+                "id": 2055,
+                "name": "Pad Thai Noodles",
+                "price": 10.99
+              },
+              {
+                "id": 2056,
+                "name": "Green Curry",
+                "price": 12.99
+              },
+              {
+                "id": 2057,
+                "name": "Tom Yum Soup",
+                "price": 5.99
+              }
+            ]
+          },
+          {
+            "id": 220,
+            "name": "Noodles",
+            "items": [
+              {
+                "id": 2058,
+                "name": "Drunk Noodles",
+                "price": 11.99
+              },
+              {
+                "id": 2059,
+                "name": "Pad See Ew",
+                "price": 10.99
+              },
+              {
+                "id": 2060,
+                "name": "Panang Curry Noodles",
+                "price": 12.49
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 18,
+        "name": "Soul Food Kitchen",
+        "rating": 4.3,
+        "distance_km": 4.8,
+        "cuisines": [
+          {
+            "id": 221,
+            "name": "Soul Food",
+            "items": [
+              {
+                "id": 2061,
+                "name": "Fried Chicken",
+                "price": 9.99
+              },
+              {
+                "id": 2062,
+                "name": "Collard Greens",
+                "price": 6.99
+              },
+              {
+                "id": 2063,
+                "name": "Cornbread",
+                "price": 3.99
+              }
+            ]
+          },
+          {
+            "id": 222,
+            "name": "Seafood",
+            "items": [
+              {
+                "id": 2064,
+                "name": "Shrimp and Grits",
+                "price": 12.99
+              },
+              {
+                "id": 2065,
+                "name": "Catfish Po' Boy",
+                "price": 11.99
+              },
+              {
+                "id": 2066,
+                "name": "Cajun Crawfish Boil",
+                "price": 14.99
+              }
+            ]
+          },
+          {
+            "id": 223,
+            "name": "Desserts",
+            "items": [
+              {
+                "id": 2067,
+                "name": "Peach Cobbler",
+                "price": 5.99
+              },
+              {
+                "id": 2068,
+                "name": "Sweet Potato Pie",
+                "price": 4.99
+              },
+              {
+                "id": 2069,
+                "name": "Red Velvet Cake",
+                "price": 6.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "name": "Bollywood Bites",
+        "rating": 4.4,
+        "distance_km": 5.5,
+        "cuisines": [
+          {
+            "id": 224,
+            "name": "Indian",
+            "items": [
+              {
+                "id": 2070,
+                "name": "Chicken Tikka Masala",
+                "price": 12.99
+              },
+              {
+                "id": 2071,
+                "name": "Vegetable Biryani",
+                "price": 11.99
+              },
+              {
+                "id": 2072,
+                "name": "Paneer Tikka",
+                "price": 10.99
+              }
+            ]
+          },
+          {
+            "id": 225,
+            "name": "Naan",
+            "items": [
+              {
+                "id": 2073,
+                "name": "Garlic Naan",
+                "price": 3.99
+              },
+              {
+                "id": 2074,
+                "name": "Butter Naan",
+                "price": 4.49
+              },
+              {
+                "id": 2075,
+                "name": "Plain Naan",
+                "price": 3.49
+              }
+            ]
+          },
+          {
+            "id": 226,
+            "name": "Curries",
+            "items": [
+              {
+                "id": 2076,
+                "name": "Lamb Curry",
+                "price": 13.99
+              },
+              {
+                "id": 2077,
+                "name": "Chana Masala",
+                "price": 9.99
+              },
+              {
+                "id": 2078,
+                "name": "Egg Curry",
+                "price": 11.99
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "name": "Mediterranean Oasis",
+        "rating": 4.3,
+        "distance_km": 5.2,
+        "cuisines": [
+          {
+            "id": 227,
+            "name": "Mediterranean",
+            "items": [
+              {
+                "id": 2079,
+                "name": "Hummus Platter",
+                "price": 7.99
+              },
+              {
+                "id": 2080,
+                "name": "Shawarma Wrap",
+                "price": 9.99
+              },
+              {
+                "id": 2081,
+                "name": "Falafel Platter",
+                "price": 8.99
+              }
+            ]
+          },
+          {
+            "id": 228,
+            "name": "Salads",
+            "items": [
+              {
+                "id": 2082,
+                "name": "Greek Salad",
+                "price": 6.99
+              },
+              {
+                "id": 2083,
+                "name": "Tabbouleh Salad",
+                "price": 5.99
+              },
+              {
+                "id": 2084,
+                "name": "Fattoush Salad",
+                "price": 6.49
+              }
+            ]
+          },
+          {
+            "id": 229,
+            "name": "Platters",
+            "items": [
+              {
+                "id": 2085,
+                "name": "Mixed Grill Platter",
+                "price": 14.99
+              },
+              {
+                "id": 2086,
+                "name": "Vegetarian Platter",
+                "price": 11.99
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

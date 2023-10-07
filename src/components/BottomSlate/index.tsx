@@ -3,21 +3,14 @@ import BottomSheet, {
   BottomSheetFooter,
   BottomSheetScrollView,
 } from '@gorhom/bottom-sheet';
-import {BottomSheetDefaultFooterProps} from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetFooter/types';
-import {Dimensions, Platform, StyleSheet, View} from 'react-native';
-import Animated, {
-  interpolate,
-  interpolateColor,
-  useAnimatedStyle,
-} from 'react-native-reanimated';
-import {colors} from '../../theme/colors';
-import {BottomSlateProps} from './type';
+import { BottomSheetDefaultFooterProps } from '@gorhom/bottom-sheet/lib/typescript/components/bottomSheetFooter/types';
+import { Dimensions, Platform, StyleSheet, View } from 'react-native';
+import Animated, { interpolate, interpolateColor, useAnimatedStyle } from 'react-native-reanimated';
+import { colors } from '../../theme/colors';
+import { BottomSlateProps } from './type';
 import React, { useMemo } from 'react';
 
-const CustomBackground: React.FC<BottomSheetBackgroundProps> = ({
-  style,
-  animatedIndex,
-}) => {
+const CustomBackground: React.FC<BottomSheetBackgroundProps> = ({ style, animatedIndex }) => {
   const containerAnimatedStyle = useAnimatedStyle(() => ({
     backgroundColor: interpolateColor(
       animatedIndex.value,
@@ -58,9 +51,7 @@ export const BottomSlate = ({
     return [windowHeight * mid, windowHeight * full];
   }, [windowHeight, snapPointsProps]);
 
-  const renderFooter = (
-    props: React.JSX.IntrinsicAttributes & BottomSheetDefaultFooterProps,
-  ) => (
+  const renderFooter = (props: React.JSX.IntrinsicAttributes & BottomSheetDefaultFooterProps) => (
     <BottomSheetFooter style={styles.footer} {...props}>
       {footerComponent}
     </BottomSheetFooter>
@@ -79,7 +70,7 @@ export const BottomSlate = ({
       keyboardBlurBehavior="restore"
       index={0}
       snapPoints={snapPoints}>
-      <BottomSheetScrollView style={footerComponent ? {marginBottom: 84} : {}}>
+      <BottomSheetScrollView style={footerComponent ? { marginBottom: 84 } : {}}>
         {children}
       </BottomSheetScrollView>
     </BottomSheet>

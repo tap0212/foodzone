@@ -9,9 +9,10 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native';
-import {SuperScreenProps} from './types';
-import {BasicButton} from '../Buttons/Basic';
-import {colors} from '../../theme/colors';
+import { SuperScreenProps } from './types';
+import { BasicButton } from '../Buttons/Basic';
+import { colors } from '../../theme/colors';
+import Header from '../Header';
 
 const SuperScreen = ({
   children,
@@ -25,10 +26,12 @@ const SuperScreen = ({
   contentContainerStyleProp,
   mainContainerStyle,
   scrollEnabled = true,
+  shouldShowHeader = false,
 }: SuperScreenProps) => {
   return (
     <SafeAreaView>
       <View style={[styles.mainContainer, mainContainerStyle]}>
+        {shouldShowHeader && <Header />}
         <ScrollView
           scrollEnabled={scrollEnabled}
           style={styles.subContainer}
