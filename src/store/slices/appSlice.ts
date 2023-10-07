@@ -36,7 +36,7 @@ export const appSlice = createSlice({
       const newCart = action.payload;
       state.cart = newCart;
     },
-    updateCurrentRestaturant: (state, action: PayloadAction<App['currentRestaurant']>) => {
+    updateCurrentRestaurant: (state, action: PayloadAction<App['currentRestaurant']>) => {
       const newRestaurant = action.payload;
       state.currentRestaurant = newRestaurant;
     },
@@ -65,7 +65,7 @@ export const {
   updateValidations,
   updateReduxState,
   updateLevels,
-  updateCurrentRestaturant,
+  updateCurrentRestaurant,
   updateCart,
 } = appSlice.actions;
 export const userSelector = (state: RootState) => state.app.user;

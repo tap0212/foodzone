@@ -8,18 +8,30 @@ import { RestuarantsData } from '../../../assets/Data/type';
 import RestaurantTile from '../../../components/RestaurantTile';
 import { useNavigation } from '@react-navigation/native';
 import { routeMap } from '../../../navigator/navigatorData';
-import { useDispatch } from 'react-redux';
-import { updateCart, updateCurrentRestaturant } from '../../../store/slices/appSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  currentRestaurantSelector,
+  updateCart,
+  updateCurrentRestaurant,
+} from '../../../store/slices/appSlice';
 import { findRestaurantById } from '../../../utils';
 // @ts-ignore
 const jsonData: RestuarantsData = restaurants.restaurants;
 
 export default function Restaurants() {
   const navigator = useNavigation();
-  const dipatch = useDispatch();
+  const currentRestaurant = useSelector(currentRestaurantSelector);
+  const dispatch = useDispatch();
   const onPressRestaurant = (id: number) => {
-    dipatch(updateCurrentRestaturant(findRestaurantById(id, jsonData)));
-    dipatch(updateCart(null));
+    const selectedRestaurant = findRestaurantById(id, jsonData);
+
+    if (selectedRestaurant && currentRestaurant && selectedRestaurant.id !== currentRestaurant.id) {
+      dispatch(updateCurrentRestaurant(selectedRestaurant));
+      dispatch(updateCart(null));
+    } else {
+      dispatch(updateCurrentRestaurant(selectedRestaurant));
+    }
+
     navigator.navigate(routeMap.onboarding.menu);
   };
   return (

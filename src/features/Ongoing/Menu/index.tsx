@@ -21,7 +21,6 @@ import {
 } from '../../../store/slices/appSlice';
 import { calculateTotalPrice, findItemById } from '../../../utils';
 import { Restaurant } from '../../../assets/Data/type';
-import { BasicButton } from '../../../components/Buttons/Basic';
 
 export default function Restaurants() {
   const selectedRestaurant = useSelector(currentRestaurantSelector);
