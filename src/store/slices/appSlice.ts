@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '..';
-import { LEVELS, ReduxApiStatus, User } from '../../types';
-import { Item, Restaurant } from '../../assets/Data/type';
+import { Cart, LEVELS, ReduxApiStatus, User } from '../../types';
+import { Restaurant } from '../../assets/Data/type';
 
 export interface App {
   user: User;
@@ -12,12 +12,7 @@ export interface App {
   reduxState: ReduxApiStatus;
   levels: LEVELS[];
   currentRestaurant: Restaurant | null;
-  cart: {
-    items: Item[];
-    quantityMap: {
-      [itemId: number]: number;
-    };
-  } | null;
+  cart: Cart;
 }
 const initialState: App = {
   user: {

@@ -1,4 +1,5 @@
 import { Restaurant, RestuarantsData } from '../assets/Data/type';
+import { Cart } from '../types';
 
 export function getRandomRating() {
   const ratings = ['$$$', '$', '$$'];
@@ -32,3 +33,21 @@ export function findItemById(itemIdToFind: number, restaurant: Restaurant) {
   }
   return null;
 }
+
+export const calculateTotalPrice = (cart: Cart, selectedRestaurant: Restaurant) => {
+  if (!cart) return 0;
+
+  let totalPrice = 0;
+  for (const itemId in cart.quantityMap) {
+    if (Object.hasOwnProperty.call(cart.quantityMap, itemId)) {
+      const quantity = cart.quantityMap[itemId];
+      const item = findItemById(Number(itemId), selectedRestaurant);
+
+      if (item) {
+        totalPrice += item.price * quantity;
+      }
+    }
+  }
+
+  return totalPrice.toFixed(2);
+};

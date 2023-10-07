@@ -9,7 +9,7 @@ import RestaurantTile from '../../../components/RestaurantTile';
 import { useNavigation } from '@react-navigation/native';
 import { routeMap } from '../../../navigator/navigatorData';
 import { useDispatch } from 'react-redux';
-import { updateCurrentRestaturant } from '../../../store/slices/appSlice';
+import { updateCart, updateCurrentRestaturant } from '../../../store/slices/appSlice';
 import { findRestaurantById } from '../../../utils';
 // @ts-ignore
 const jsonData: RestuarantsData = restaurants.restaurants;
@@ -19,6 +19,7 @@ export default function Restaurants() {
   const dipatch = useDispatch();
   const onPressRestaurant = (id: number) => {
     dipatch(updateCurrentRestaturant(findRestaurantById(id, jsonData)));
+    dipatch(updateCart(null));
     navigator.navigate(routeMap.onboarding.menu);
   };
   return (
