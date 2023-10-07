@@ -12,14 +12,14 @@ export default function Header({ text = 'Food zone' }: { text?: string }) {
 
 const styles = StyleSheet.create({
   mainContainer: {
-    height: 64,
+    height: 48,
     alignItems: 'center',
     justifyContent: 'center',
     borderBottomWidth: 0.2,
     borderBottomColor: colors.background.secondary,
     width: '100%',
     backgroundColor: colors.background.primary,
-    padding: 16,
+    padding: 8,
   },
   text: {
     fontSize: 18,

@@ -13,11 +13,18 @@ import {
 import Header from '../../components/Header';
 import { colors } from '../../theme/colors';
 import { useSelector } from 'react-redux';
-import { cartSelector, currentRestaurantSelector } from '../../store/slices/appSlice';
+import { cartSelector, currentRestaurantSelector, updateCart } from '../../store/slices/appSlice';
 import { findItemById } from '../../utils';
 import { Restaurant } from '../../assets/Data/type';
+import Toast from 'react-native-toast-message';
+import { routeMap } from '../../navigator/navigatorData';
+import { useNavigation } from '@react-navigation/native';
+import { useAppDispatch } from '../../hooks/resux';
 
 export default function Restaurants() {
+  const navigation = useNavigation();
+  const dispatch = useAppDispatch();
+
   const cart = useSelector(cartSelector);
   const selectedRestaurant = useSelector(currentRestaurantSelector);
   const calculateSubtotal = () => {
@@ -37,7 +44,6 @@ export default function Restaurants() {
     return subtotal;
   };
 
-  // Calculate 8% tax on the subtotal
   const calculateTax = () => {
     const subtotal = calculateSubtotal();
     return subtotal * 0.08; // 8% tax
@@ -50,6 +56,16 @@ export default function Restaurants() {
     const deliveryCharges = 2.0; // $2 delivery charges
     const convenienceFee = 0.2; // $0.20 convenience fee
     return subtotal + tax + deliveryCharges + convenienceFee;
+  };
+  const OnPressCheckout = () => {
+    Toast.show({
+      type: 'success',
+      text1: 'Your order has been placed and will be delivered soon',
+      position: 'top',
+      topOffset: 80,
+    });
+    dispatch(updateCart(null));
+    navigation.navigate(routeMap.onboarding.landing);
   };
   return (
     <KeyboardAvoidingView
@@ -97,11 +113,7 @@ export default function Restaurants() {
             </View>
           </View>
         </View>
-        <TouchableOpacity
-          style={styles.goToCartButton}
-          onPress={() => {
-            //
-          }}>
+        <TouchableOpacity style={styles.goToCartButton} onPress={OnPressCheckout}>
           <Text style={styles.btnText}>Go to cart</Text>
         </TouchableOpacity>
       </ScrollView>
