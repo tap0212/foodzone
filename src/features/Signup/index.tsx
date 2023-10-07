@@ -6,7 +6,7 @@ import SuperScreen from '../../components/SuperScreen';
 import { BottomSlate } from '../../components/BottomSlate';
 import Input from '../../components/InputField';
 import { BasicButton } from '../../components/Buttons/Basic';
-import { useNavigation } from '@react-navigation/native';
+import { CommonActions, useNavigation } from '@react-navigation/native';
 import { useAppDispatch } from '../../hooks/resux';
 import { useSelector } from 'react-redux';
 import { LEVELS, ReduxApiStatus, User } from '../../types';
@@ -44,7 +44,12 @@ const Signup = () => {
     }
     if (reduxState === ReduxApiStatus.SUCCESS) {
       dispatch(updateLevels(LEVELS.LOGIN_COMPLETE));
-      navigation.navigate(routeMap.onboarding.landing);
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: routeMap.onboarding.landing }],
+        }),
+      );
     }
   }, [reduxState, message]);
   const handleNextPress = () => {
