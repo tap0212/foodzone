@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Toast from 'react-native-toast-message';
 import { colors } from '../../theme/colors';
 import SuperScreen from '../../components/SuperScreen';
 import { BottomSlate } from '../../components/BottomSlate';
 import Input from '../../components/InputField';
 import { BasicButton } from '../../components/Buttons/Basic';
-import { CommonActions, useNavigation } from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 import { useAppDispatch } from '../../hooks/resux';
 import { useSelector } from 'react-redux';
 import { LEVELS, ReduxApiStatus, User } from '../../types';
@@ -18,10 +18,10 @@ import {
   userSelector,
   validationsSelector,
 } from '../../store/slices/appSlice';
-import useAuth from '../../hooks/useAuth';
 import { routeMap } from '../../navigator/navigatorData';
+import useAuth from '../../hooks/useAuth';
 
-const Login = () => {
+const Signup = () => {
   const navigation = useNavigation();
   const reduxState: ReduxApiStatus = useSelector(reduxStateSelector);
   const dispatch = useAppDispatch();
@@ -29,7 +29,7 @@ const Login = () => {
   const validations: { emailError: string; passwordError: string } =
     useSelector(validationsSelector);
   const [password, setPassword] = useState<string>('');
-  const { message, callLogin } = useAuth({ email: user.email, password });
+  const { message, callSignup } = useAuth({ email: user.email, password });
   useEffect(() => {
     if (
       message &&
@@ -44,16 +44,11 @@ const Login = () => {
     }
     if (reduxState === ReduxApiStatus.SUCCESS) {
       dispatch(updateLevels(LEVELS.LOGIN_COMPLETE));
-      navigation.dispatch(
-        CommonActions.reset({
-          index: 0,
-          routes: [{ name: routeMap.onboarding.landing }],
-        }),
-      );
+      navigation.navigate(routeMap.onboarding.landing);
     }
   }, [reduxState, message]);
   const handleNextPress = () => {
-    void callLogin();
+    void callSignup();
   };
   const getIsNextDisabled = () => {
     if (
@@ -82,6 +77,9 @@ const Login = () => {
   const onChangePassword = (text: string) => {
     setPassword(text);
   };
+  const onPressLogin = () => {
+    navigation.navigate(routeMap.onboarding.login);
+  };
   return (
     <SuperScreen noBottomButton={true} mainContainerStyle={styles.mainContainerStyle}>
       <View style={styles.containerStyle}>
@@ -100,7 +98,7 @@ const Login = () => {
             </View>
           }>
           <View style={styles.bottomContainer}>
-            <Text style={styles.setupText}>Login</Text>
+            <Text style={styles.setupText}>Signup</Text>
             <View style={styles.inputContainer}>
               <Input
                 error={validations.emailError}
@@ -119,6 +117,12 @@ const Login = () => {
                 design="filled"
               />
             </View>
+            <View style={styles.loginContainer}>
+              <Text style={styles.loginQuestion}>Already a user? </Text>
+              <TouchableOpacity onPress={onPressLogin} style={styles.loginButton}>
+                <Text style={styles.loginText}>Login</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </BottomSlate>
       </View>
@@ -126,9 +130,28 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
 
 const styles = StyleSheet.create({
+  loginText: {
+    color: '#fff',
+    fontSize: 14,
+    textTransform: 'uppercase',
+    lineHeight: 40,
+    fontWeight: '800',
+  },
+  loginButton: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#fff',
+  },
+  loginContainer: {
+    marginVertical: 24,
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+    gap: 4,
+  },
   containerStyle: {
     justifyContent: 'space-between',
     flex: 1,
@@ -148,7 +171,7 @@ const styles = StyleSheet.create({
   },
   mainText: {
     color: colors.text,
-    fontSize: 36,
+    fontSize: 32,
     lineHeight: 40,
     fontWeight: '600',
   },
@@ -157,7 +180,14 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textTransform: 'uppercase',
     lineHeight: 40,
-    fontWeight: '600',
+    fontWeight: '800',
+  },
+  loginQuestion: {
+    color: '#fff',
+    fontSize: 14,
+    textTransform: 'uppercase',
+    lineHeight: 40,
+    fontWeight: '800',
   },
   inputContainer: {
     display: 'flex',

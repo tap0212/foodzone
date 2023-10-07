@@ -114,7 +114,7 @@ export default function Restaurants() {
           </View>
         </View>
         <TouchableOpacity style={styles.goToCartButton} onPress={OnPressCheckout}>
-          <Text style={styles.btnText}>Go to cart</Text>
+          <Text style={styles.btnText}>Make Payment</Text>
         </TouchableOpacity>
       </ScrollView>
     </KeyboardAvoidingView>
@@ -125,7 +125,7 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: 18,
     fontWeight: '600',
-    color: '#000',
+    color: '#fff',
   },
   goToCartButton: {
     display: 'flex',

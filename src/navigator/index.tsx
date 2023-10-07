@@ -21,7 +21,7 @@ const StackNavigator = () => {
         return routeMap.onboarding.landing;
 
       default:
-        return routeMap.onboarding.login;
+        return routeMap.onboarding.signup;
     }
   };
   return (
