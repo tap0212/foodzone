@@ -30,12 +30,15 @@ export default function useAuth({ email, password }: { email: string; password: 
       if (error.code === 'auth/email-already-in-use') {
         setMessage('That email address is already in use!');
         console.log('That email address is already in use!');
+        return;
       } else if (error.code === 'auth/invalid-email') {
         setMessage('That email address is invalid!');
         console.log('That email address is invalid!');
+        return;
       } else {
         setMessage('Something went wrong');
         console.error(error);
+        return;
       }
     }
   };
@@ -61,12 +64,15 @@ export default function useAuth({ email, password }: { email: string; password: 
       if (error.code === 'auth/email-already-in-use') {
         setMessage('That email address is already in use!');
         console.log('That email address is already in use!');
+        return;
       } else if (error.code === 'auth/invalid-email') {
         setMessage('That email address is invalid!');
         console.log('That email address is invalid!');
+        return;
       } else {
         setMessage('Something went wrong');
         console.error(error);
+        return;
       }
     }
   };

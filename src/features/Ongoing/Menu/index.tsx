@@ -118,7 +118,7 @@ export default function Restaurants() {
       <Header />
       <View style={styles.innerContainer}>
         <Text style={styles.h2}>{selectedRestaurant?.name}</Text>
-        <Text>{selectedRestaurant?.distance_km}KM far away</Text>
+        <Text style={styles.textColor}>{selectedRestaurant?.distance_km}KM far away</Text>
         <FlatList
           contentInset={{ bottom: 100 }}
           data={selectedRestaurant?.cuisines}
@@ -164,6 +164,10 @@ export default function Restaurants() {
 }
 
 const styles = StyleSheet.create({
+  textColor: {
+    color: colors.text,
+    fontWeight: '600',
+  },
   btnText: {
     fontSize: 18,
     fontWeight: '600',
@@ -209,6 +213,7 @@ const styles = StyleSheet.create({
   h2: {
     fontWeight: '600',
     fontSize: 24,
+    color: colors.text,
   },
   list: {},
   bottomContainer: {

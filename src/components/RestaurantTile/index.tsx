@@ -24,18 +24,22 @@ export default function RestaurantTile({
       style={styles.container}>
       <Image style={styles.img} source={img} />
       <View style={styles.restaurantView}>
-        <Text>{name}</Text>
-        <Text>{distance_km} Km away</Text>
+        <Text style={styles.textColor}>{name}</Text>
+        <Text style={styles.textColor}>{distance_km} Km away</Text>
       </View>
       <View style={styles.cuisineView}>
-        <Text>{cuisines.length} Cuisines</Text>
-        <Text>{getRandomRating()}</Text>
+        <Text style={styles.textColor}>{cuisines.length} Cuisines</Text>
+        <Text style={styles.textColor}>{getRandomRating()}</Text>
       </View>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
+  textColor: {
+    color: colors.text,
+    fontWeight: '600',
+  },
   img: {
     width: 24,
     height: 24,

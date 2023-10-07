@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
   h2: {
     fontWeight: '600',
     text: 18,
+    color: '#000',
   },
   list: {},
   bottomContainer: {

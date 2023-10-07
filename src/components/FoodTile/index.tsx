@@ -28,8 +28,8 @@ export default function FoodTile({
     <View key={id} style={styles.container}>
       <Image style={styles.img} source={img} />
       <View style={styles.restaurantView}>
-        <Text>{name}</Text>
-        <Text>$ {price}</Text>
+        <Text style={styles.textColor}>{name}</Text>
+        <Text style={styles.textColor}>$ {price}</Text>
       </View>
       <View style={styles.cuisineView}>
         <Counter value={numberOfItems} onIncrement={onIncrement} onDecrement={onDecrement} />
@@ -39,6 +39,10 @@ export default function FoodTile({
 }
 
 const styles = StyleSheet.create({
+  textColor: {
+    color: colors.text,
+    fontWeight: '600',
+  },
   img: {
     width: 24,
     height: 24,

@@ -41,6 +41,8 @@ const styles = StyleSheet.create({
   countText: {
     fontSize: 24,
     marginHorizontal: 20,
+    color: colors.text,
+    fontWeight: '600',
   },
 });
 
